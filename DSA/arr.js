@@ -156,6 +156,39 @@
 // }
 // console.log(remove([1,3,4,5,6,7,8,6,5,5,4]))
 
+//..................... Remove subarray that is having largest elem.........................
+// function removeSubMax(arr){
+//     if(arr.length==0)return[]
+
+//     let max=Math.max(...arr)
+//     let index=arr.indexOf(max)
+//     arr.splice(index,1)
+    
+//     return arr
+// }
+// let arr=[1,3,4,5,6,7,4,3,4,5]
+// console.log(removeSubMax(arr))
+
+//..................... Find last non repeating character in string ...................
+// function lastNonRepeatingChar(str){
+//     let count={}
+//     let order=[]
+//     for(let char of str){
+//         if(count[char]){
+//             count[char]++;
+//         }else{
+//             count[char]=1
+//             order.push(char)
+//         }
+//     }
+//     for(let i=order.length-1;i>=0;i--){
+//         if(count[order[i]]===1){
+//             return order[i]
+//         }
+//     }
+// }
+
+
 
 
 
