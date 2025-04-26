@@ -386,5 +386,73 @@
 // console.log("After removing duplicates:");
 // list.display();
 
+//Remove middle element from linked list
 
 
+// class Node {
+//     constructor(value) {
+//         this.value = value;
+//         this.next = null;
+//     }
+// }
+
+// class LinkedList {
+//     constructor() {
+//         this.head = null;
+//     }
+
+//     insert(value) {
+//         const newNode = new Node(value);
+//         if (!this.head) {
+//             this.head = newNode;
+//             return;
+//         }
+//         let current = this.head;
+//         while (current.next) {
+//             current = current.next;
+//         }
+//         current.next = newNode;
+//     }
+
+//     removeMiddle() {
+//         if (!this.head || !this.head.next) {
+//             this.head = null; 
+//             return;
+//         }
+
+//         let slow = this.head;
+//         let fast = this.head;
+//         let prev = null;
+
+       
+//         while (fast && fast.next) {
+//             fast = fast.next.next;
+//             prev = slow;
+//             slow = slow.next;
+//         }
+
+ 
+//         prev.next = slow.next; 
+//     }
+
+//     display() {
+//         let current = this.head;
+//         const result = [];
+//         while (current) {
+//             result.push(current.value);
+//             current = current.next;
+//         }
+//         console.log(result.join(" -> "));
+//     }
+// }
+
+// const list = new LinkedList();
+// [1, 2, 3, 4, 5].forEach(val => list.insert(val));
+
+// console.log("Before removing middle:");
+// list.display();
+
+// list.removeMiddle();
+
+// console.log("After removing middle:");
+// list.display();
