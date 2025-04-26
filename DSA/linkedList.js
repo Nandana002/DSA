@@ -318,3 +318,73 @@
 //   console.log("size = " + linkedlist.size());
 
 
+
+//Remove duplicates from a linked list
+
+// class Node {
+//     constructor(value) {
+//         this.value = value;
+//         this.next = null;
+//     }
+// }
+
+// class LinkedList {
+//     constructor() {
+//         this.head = null;
+//     }
+
+//     insert(value) {
+//         const newNode = new Node(value);
+//         if (!this.head) {
+//             this.head = newNode;
+//             return;
+//         }
+//         let current = this.head;
+//         while (current.next) {
+//             current = current.next;
+//         }
+//         current.next = newNode;
+//     }
+
+
+//     removeDuplicates() {
+//         let current = this.head;
+//         let prev = null;
+//         const seen = new Set();
+//         while (current) {
+//             if (seen.has(current.value)) {
+//                 prev.next = current.next;
+//             } else {
+//                 seen.add(current.value);
+//                 prev = current;
+//             }
+//             current = current.next;
+//         }
+//     }
+
+
+//     display() {
+//         let current = this.head;
+//         const result = [];
+//         while (current) {
+//             result.push(current.value);
+//             current = current.next;
+//         }
+//         console.log(result.join(" -> "));
+//     }
+// }
+
+
+// const list = new LinkedList();
+// [1, 3, 4, 3, 5, 1, 6, 4].forEach(val => list.insert(val));
+
+// console.log("Before removing duplicates:");
+// list.display();
+
+// list.removeDuplicates();
+
+// console.log("After removing duplicates:");
+// list.display();
+
+
+

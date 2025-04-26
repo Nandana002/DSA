@@ -187,6 +187,35 @@
 //         }
 //     }
 // }
+//find third largest element
+// function thirdLargeElement(arr){
+//     if(arr.length<3){
+//         return null;
+//     }
+//     let first=-Infinity
+//     let second=-Infinity
+//     let third=-Infinity
+//     for(let num of arr){
+//         if(num>first){
+//             third=second
+//             second=first
+//             first=num
+//         }else if(num>second&&num!==first){
+//             third=second
+//             second=num;
+
+//         }else if(num>this&&num!==second&&num!==first){
+//             third=num
+
+//         }
+    
+//     }
+//     return third===-Infinity?numm:third
+// }
+
+
+
+
 
 
 
