@@ -682,7 +682,7 @@
 // list.display();
 
 
-//Reverse a singly linked list
+// Reverse a singly linked list
 // class Node{
 //     constructor(value){
 //     this.value=value
@@ -730,18 +730,7 @@
 //     }
 // }
 // const list = new LinkedList();
-// list.append(1);
-// list.append(2);
-// list.append(3);
-// list.append(4);
-
-// console.log("Original List:");
-// list.printList();
-
-// list.reverse();
-
-// console.log("Reversed List:");
-// list.printList();
+// c
 
 // ///Reverse a doubly linked list
 // class Node{
@@ -800,14 +789,90 @@
 // list.append(30);
 // list.append(40);
 
-// console.log("Original List:");
-// list.printForward();
+// // console.log("Original List:");
+// // list.printForward();
 
-// list.reverse();
+// // list.reverse();
 
-// console.log("Reversed List:");
-// list.printForward();
-
-
+// // console.log("Reversed List:");
+// // list.printForward();
 
 
+
+// // Delete the last occurrence of a value in a linked list
+// class Node {
+//     constructor(data) {
+//         this.data = data;
+//         this.next = null;
+//     }
+// }
+
+// class LinkedList {
+//     constructor() {
+//         this.head = null;
+//     }
+
+//     insertAtEnd(data) {
+//         const newNode = new Node(data);
+//         if (!this.head) {
+//             this.head = newNode;
+//         } else {
+//             let current = this.head;
+//             while (current.next) {
+//                 current = current.next;
+//             }
+//             current.next = newNode;
+//         }
+//     }
+
+//     deleteLastOccurrence(value) {
+//         let current = this.head;
+//         let prev = null;
+//         let last = null;
+//         let prevLast = null;
+
+//         while (current) {
+//             if (current.data === value) {
+//                 last = current;
+//                 prevLast = prev;
+//             }
+//             prev = current;
+//             current = current.next;
+//         }
+
+//         if (!last) {
+//             console.log("Value not found.");
+//             return;
+//         }
+
+//         if (last === this.head) {
+//             this.head = this.head.next;
+//         } else {
+//             prevLast.next = last.next;
+//         }
+
+//         console.log(`Deleted last occurrence of ${value}`);
+//     }
+
+//     printList() {
+//         let current = this.head;
+//         let result = '';
+//         while (current) {
+//             result += current.data + ' -> ';
+//             current = current.next;
+//         }
+//         console.log(result.slice(0, -4) || 'List is empty.');
+//     }
+// }
+
+
+// const list = new LinkedList();
+// list.insertAtEnd(1);
+// list.insertAtEnd(2);
+// list.insertAtEnd(3);
+// list.insertAtEnd(2);
+// list.insertAtEnd(4);
+// list.printList(); 
+
+// list.deleteLastOccurrence(2); 
+// list.printList(); 

@@ -8,6 +8,18 @@
 // }
 // console.log(reverseStr("hello"))
 //O(n^2)
+// reverseStr("hello") → Calls reverseStr("ello") + "h"
+
+// reverseStr("ello") → Calls reverseStr("llo") + "e"
+
+// reverseStr("llo") → Calls reverseStr("lo") + "l"
+
+// reverseStr("lo") → Calls reverseStr("o") + "l"
+
+// reverseStr("o") → Returns "o" (since length is 1)
+
+// Combine: "o" + "l" + "l" + "e" + "h" → "olleh"
+
 
 // Print first 10 elements of Fibonacci series using recursion
 
@@ -99,3 +111,59 @@
 // let arr=[1,3,4,5,6,5]
 // let result=removeDuplicates(arr)
 // console.log(result)
+
+
+//check palindrome
+// function str(palin,left=0,right=palin.length-1){
+//     if(left>=right){
+//         return true
+
+//     }
+//     if(palin[left]!=palin[right]){
+//         return false
+//     }
+//     return str(palin,left+1,right-1)
+// }
+// console.log(str('ada'))
+
+
+// function range(start,end){
+//     if(end<start){
+//         return[]
+//     }
+//     const numbers=range(start,end-1)
+//     numbers.push(end)
+//     return numbers
+// }
+// console.log(range(1,5))
+
+// // recursion multiplication table
+
+// function printTable(num, i = 1) {
+//     if (i > 10) return;
+//     console.log(`${num} x ${i} = ${num * i}`);
+//     printTable(num, i + 1);
+//   }
+  
+//   let number = 5;
+//   printTable(number);
+  
+//  find the smallest word in a sentence using recursion:
+
+// function findSmallestWord(sentence, words = sentence.split(' '), index = 0, smallest = words[0]) {
+//     if (index === words.length) return smallest;
+//     if (words[index].length < smallest.length) smallest = words[index];
+//     return findSmallestWord(sentence, words, index + 1, smallest);
+// }
+
+// let sentence = "i am learning java script";
+// console.log(findSmallestWord(sentence));
+
+
+
+
+
+
+
+
+

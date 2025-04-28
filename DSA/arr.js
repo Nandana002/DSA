@@ -212,7 +212,27 @@
 //     }
 //     return third===-Infinity?numm:third
 // }
+// Third Largest Element in an Array
 
+// function thirdLargest(arr){
+//   const sorted = [...new Set(arr)].sort((a,b) => b-a);
+//   return sorted.length >= 3?sorted[2]:null;
+// }
+
+// console.log(thirdLargest([10,4,3,50,23,90]));
+// removing an char from a string
+// function removel(str){
+//   if(str.length === 0){
+//     return "";
+//   }
+//   if(str[0].toLowerCase() === 'o'){
+//     return removel(str.slice(1))
+//   }
+//   return str[0] + removel(str.slice(1));
+// }
+// const text = "lock the local room of local police"
+// const result = removel(text)
+// console.log(result);
 
 
 
