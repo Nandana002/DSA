@@ -456,3 +456,234 @@
 
 // console.log("After removing middle:");
 // list.display();
+
+
+// Delete nth node from end (two-pointer approach)
+// class Node {
+//     constructor(value) {
+//         this.value = value;
+//         this.next = null;
+//     }
+// }
+
+// class LinkedList {
+//     constructor() {
+//         this.head = null;
+//     }
+
+//     insert(value) {
+//         const newNode = new Node(value);
+//         if (!this.head) {
+//             this.head = newNode;
+//             return;
+//         }
+//         let current = this.head;
+//         while (current.next) {
+//             current = current.next;
+//         }
+//         current.next = newNode;
+//     }
+
+//     deleteNthFromEnd(n) {
+//         let dummy = new Node(0);
+//         dummy.next = this.head;
+//         let fast = dummy;
+//         let slow = dummy;
+
+//         for (let i = 0; i < n; i++) {
+//             fast = fast.next;
+//         }
+
+//         while (fast.next) {
+//             fast = fast.next;
+//             slow = slow.next;
+//         }
+
+//         slow.next = slow.next.next;
+
+        
+//         this.head = dummy.next;
+//     }
+
+//     display() {
+//         let current = this.head;
+//         const result = [];
+//         while (current) {
+//             result.push(current.value);
+//             current = current.next;
+//         }
+//         console.log(result.join(" -> "));
+//     }
+// }
+
+// const list = new LinkedList();
+// [1, 2, 3, 4, 5].forEach(val => list.insert(val));
+
+// console.log("Before deletion:");
+// list.display();
+
+// list.deleteNthFromEnd(2); 
+
+// console.log("After deletion:");
+// list.display();
+
+
+
+// Merge two sorted linked lists
+// class Node {
+//     constructor(value) {
+//         this.value = value;
+//         this.next = null;
+//     }
+// }
+
+// class LinkedList {
+//     constructor() {
+//         this.head = null;
+//     }
+
+//     insert(value) {
+//         const newNode = new Node(value);
+//         if (!this.head) {
+//             this.head = newNode;
+//             return;
+//         }
+//         let current = this.head;
+//         while (current.next) {
+//             current = current.next;
+//         }
+//         current.next = newNode;
+//     }
+
+//     static mergeSortedLists(list1, list2) {
+//         let dummy = new Node(0);
+//         let current = dummy;
+
+//         let l1 = list1.head;
+//         let l2 = list2.head;
+
+//         while (l1 && l2) {
+//             if (l1.value < l2.value) {
+//                 current.next = l1;
+//                 l1 = l1.next;
+//             } else {
+//                 current.next = l2;
+//                 l2 = l2.next;
+//             }
+//             current = current.next;
+//         }
+
+//         // Attach remaining nodes if any
+//         if (l1) {
+//             current.next = l1;
+//         }
+//         if (l2) {
+//             current.next = l2;
+//         }
+
+//         // Return merged list
+//         const mergedList = new LinkedList();
+//         mergedList.head = dummy.next;
+//         return mergedList;
+//     }
+
+//     display() {
+//         let current = this.head;
+//         const result = [];
+//         while (current) {
+//             result.push(current.value);
+//             current = current.next;
+//         }
+//         console.log(result.join(" -> "));
+//     }
+// }
+
+// // Example usage:
+// const list1 = new LinkedList();
+// [1, 3, 5].forEach(val => list1.insert(val));
+
+// const list2 = new LinkedList();
+// [2, 4, 6].forEach(val => list2.insert(val));
+
+// console.log("List 1:");
+// list1.display();
+
+// console.log("List 2:");
+// list2.display();
+
+// const mergedList = LinkedList.mergeSortedLists(list1, list2);
+// console.log("Merged List:");
+// mergedList.display();
+
+//remove odd elements nodes from linkedList
+// class Node {
+//     constructor(value) {
+//         this.value = value;
+//         this.next = null;
+//     }
+// }
+
+// class LinkedList {
+//     constructor() {
+//         this.head = null;
+//     }
+
+//     insert(value) {
+//         const newNode = new Node(value);
+//         if (!this.head) {
+//             this.head = newNode;
+//             return;
+//         }
+//         let current = this.head;
+//         while (current.next) {
+//             current = current.next;
+//         }
+//         current.next = newNode;
+//     }
+
+//     removeOdd() {
+//         // First remove odd elements from beginning
+//         while (this.head && this.head.value % 2 !== 0) {
+//             this.head = this.head.next;
+//         }
+
+//         // Now traverse and remove remaining odd elements
+//         let current = this.head;
+//         while (current && current.next) {
+//             if (current.next.value % 2 !== 0) {
+//                 current.next = current.next.next; // skip the odd node
+//             } else {
+//                 current = current.next; // move forward
+//             }
+//         }
+//     }
+
+//     display() {
+//         let current = this.head;
+//         const result = [];
+//         while (current) {
+//             result.push(current.value);
+//             current = current.next;
+//         }
+//         console.log(result.join(" -> "));
+//     }
+// }
+
+// // Example usage:
+// const list = new LinkedList();
+// [1, 2, 3, 4, 5, 6, 7, 8].forEach(val => list.insert(val));
+
+// console.log("Original List:");
+// list.display();
+
+// list.removeOdd();
+
+// console.log("After Removing Odd Elements:");
+// list.display();
+
+
+
+
+
+
+
