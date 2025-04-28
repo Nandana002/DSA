@@ -682,7 +682,131 @@
 // list.display();
 
 
+//Reverse a singly linked list
+// class Node{
+//     constructor(value){
+//     this.value=value
+//     this.next=null
+//     }
 
+// }
+// class LinkedList{
+//     constructor(){
+//         this.head=null
+//     }
+//     append(value){
+//         const newNode=new Node(value)
+//         if(!this.head){
+//             this.head=newNode
+//             return
+//         }
+//         let curr=this.head
+//         while(curr.next){
+//             curr=curr.next
+//         }
+//         curr.next=newNode
+//     }
+//     printList(){
+//         let temp=this.head
+//         let result=''
+//         while(temp){
+//             result+=temp.value+">"
+//             temp=temp.next
+//         }
+//         console.log(result+'null')
+//     }
+
+//     reverse(){
+//         let prev=null
+//         let curr=this.head
+//         let next=null
+//         while(curr){
+//             next=curr.next
+//             curr.next=prev
+//             prev=curr
+//             curr=next
+//         }
+//         this.head=prev
+//     }
+// }
+// const list = new LinkedList();
+// list.append(1);
+// list.append(2);
+// list.append(3);
+// list.append(4);
+
+// console.log("Original List:");
+// list.printList();
+
+// list.reverse();
+
+// console.log("Reversed List:");
+// list.printList();
+
+// ///Reverse a doubly linked list
+// class Node{
+//     constructor(value){
+//         this.value=value
+//         this.next=null
+//         this.prev=null
+//     }
+// }
+// class DoublyLinkedList{
+//     constructor(){
+//         this.head=null
+//         this.tail=null
+//     }
+//     append(value){
+//         const newNode=new Node(value)
+//             if(!this.head){
+//                this.head=newNode;
+//                this.tail=newNode;
+//                return
+//             }
+//             this.tail.next=newNode
+//             newNode.prev=this.tail
+//             this.tail=newNode
+//         }
+
+//         printForward(){
+//             let temp=this.head;
+//             let result=''
+//             while(temp){
+//                 result+=temp.value+'>'
+//                 temp=temp.next
+//             }
+//             console.log(result+'null')
+//         }
+//         reverse(){
+//             let curr=this.head
+//             let temp=null
+//             while(curr){
+
+//                 temp=curr.prev
+//                 curr.prev=curr.next
+//                 curr.next=temp
+
+
+//                 curr=curr.prev
+//             }
+//             if(temp!==null){
+//                 this.head=temp.prev
+//             }
+//         }
+//     }
+//     const list = new DoublyLinkedList();
+// list.append(10);
+// list.append(20);
+// list.append(30);
+// list.append(40);
+
+// console.log("Original List:");
+// list.printForward();
+
+// list.reverse();
+
+// console.log("Reversed List:");
+// list.printForward();
 
 
 
