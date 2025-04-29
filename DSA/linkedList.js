@@ -1,5 +1,5 @@
 
-//array to linked list
+// // array to linked list
 // class Node {
 //     constructor (value) {
 //         this.value = value
@@ -8,59 +8,59 @@
 // }
 
 // class LinkedList {
-// //     constructor () {
-// //         this.head = null
-// //         this.size = 0
-// //     }
+//     constructor () {
+//         this.head = null
+//         this.size = 0
+//     }
 
-// //     isEmpty() {
-// //         return this.size === 0
-// //     }
+//     isEmpty() {
+//         return this.size === 0
+//     }
 
-// //     getSize() {
-// //         return this.size
-// //     }
+//     getSize() {
+//         return this.size
+//     }
 
-// //     add(value) {
-// //         const node = new Node (value);
-// //         if(this.isEmpty()) {
-// //             this.head = node
-// //         } else {
-// //             let curr = this.head
-// //             while(curr.next) {
-// //                 curr = curr.next
-// //             }
-// //             curr.next = node
-// //         }
-// //     }
+//     add(value) {
+//         const node = new Node (value);
+//         if(this.isEmpty()) {
+//             this.head = node
+//         } else {
+//             let curr = this.head
+//             while(curr.next) {
+//                 curr = curr.next
+//             }
+//             curr.next = node
+//         }
+//     }
 
-// //     print() {
-// //         if (this.isEmpty()) {
-// //             console.log('List is empty')
-// //         }
-// //         else{
-// //             let curr = this.head
-// //         let listValues = ""
-// //         while(curr) {
-// //             listValues += `${curr.value} `
-// //             curr = curr.next
-// //         }
-// //         console.log(listValues)
-// //         }
+//     print() {
+//         if (this.isEmpty()) {
+//             console.log('List is empty')
+//         }
+//         else{
+//             let curr = this.head
+//         let listValues = ""
+//         while(curr) {
+//             listValues += `${curr.value} `
+//             curr = curr.next
+//         }
+//         console.log(listValues)
+//         }
         
-// //     }
-// // }
+//     }
+// }
 
-// // function arrayToLinkedList (arr) {
-// //     let linkedList = new LinkedList()
-// //     arr.forEach(item=>linkedList.add(item))
-// //     return linkedList
-// // }
+// function arrayToLinkedList (arr) {
+//     let linkedList = new LinkedList()
+//     arr.forEach(item=>linkedList.add(item))
+//     return linkedList
+// }
 
-// // let list = new LinkedList()
-// // const array = [10,20,3,4,5]
-// // arrayToLinkedList(array)
-// // list.print()
+// let list = new LinkedList()
+// const array = [10,20,3,4,5]
+// arrayToLinkedList(array)
+// list.print()
 // //Reverse a doubly linkedList
 
 // // Node class
@@ -642,18 +642,18 @@
 //     }
 
 //     removeOdd() {
-//         // First remove odd elements from beginning
+//         
 //         while (this.head && this.head.value % 2 !== 0) {
 //             this.head = this.head.next;
 //         }
 
-//         // Now traverse and remove remaining odd elements
+//        
 //         let current = this.head;
 //         while (current && current.next) {
 //             if (current.next.value % 2 !== 0) {
-//                 current.next = current.next.next; // skip the odd node
+//                 current.next = current.next.next; 
 //             } else {
-//                 current = current.next; // move forward
+//                 current = current.next;
 //             }
 //         }
 //     }
