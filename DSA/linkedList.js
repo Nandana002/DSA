@@ -1,3 +1,17 @@
+//LInked list node structor
+// class Node{
+//     constructor(data){
+//         this.data=data
+//         this.next=null
+//     }
+// // }
+// //Insert at beginning
+// function insertAtBeginning(head,data){
+//     let newNode=new Node(data)
+//     newNode.next=head
+//     return newNode;
+// }
+
 
 // // array to linked list
 // class Node {
@@ -876,3 +890,8 @@
 
 // list.deleteLastOccurrence(2); 
 // list.printList(); 
+
+
+
+//palindrome linked List
+

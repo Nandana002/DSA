@@ -192,7 +192,7 @@
 //     if(arr.length<3){
 //         return null;
 //     }
-//     let first=-Infinity
+//     let first=-Infinityl
 //     let second=-Infinity
 //     let third=-Infinity
 //     for(let num of arr){
@@ -239,6 +239,187 @@
 
 
 
+// Find second highest and second least element from an array
+
+// function findSecondHIghLow(arr){
+//     let uniqueArr=[...new Set(arr)]
+
+
+//     if(uniqueArr.length<2){
+//         console.log("Array must have at lease 2 unique elemets.")
+//         return
+//     }
+//     uniqueArr.sort((a,b)=>a-b)
+
+//     let secondLeast=uniqueArr[1]
+//     let secondHighest=uniqueArr[uniqueArr.length-2]
+
+//     console.log("second Least:",secondLeast)
+//     console.log("second Highest:",secondHighest)
+// }
+
+// let arr=[3,4,5,32,3,4,5,6]
+// findSecondHIghLow(arr)
+//find sum of prime numbers
+// function isPrime(num){
+//     if(num<2)return false
+//     for(let j=2;j<=Math.sqrt(num);j++){
+//         if(num%j===0){
+//             return false;
+//         }
+//     }
+//     return true
+// }
+
+// function sumPrimes(n){
+//     let sum=0;
+//     for(let i=2;i<=n;i++){
+//         if(isPrime(i)){
+//             sum+=i
+//         }
+//     }
+//     return sum;
+// }
+// console.log(sumPrimes(10))
+
+
+//find the last non-repeating character from a string in 0(n)
+
+// function lastNonRepeatingChar(str){
+//     let freq=new Map()
+//     for(let ch of str){
+//         freq.set(ch,(freq.get(ch)||0)+1)
+//     }
+
+//     for(let i=str.length-1;i>=0;i--){
+//         if(freq.get(str[i])===1){
+//             return str[i]
+//         }
+//     }
+//     return null
+// }
+// let input="aabbaaccdf"
+// console.log("last non repeating character:",lastNonRepeatingChar(input)
 
 
 
+// -implement linked list with condition that only 1 duplicate is allowed in js/
+
+
+// class Node {
+//     constructor(value) {
+//       this.value = value;
+//       this.next = null;
+//     }
+//   }
+  
+//   class CustomLinkedList {
+//     constructor() {
+//       this.head = null;
+//     }
+  
+//     countValue(value) {
+//       let current = this.head;
+//       let count = 0;
+//       while (current) {
+//         if (current.value === value) {
+//           count++;
+//         }
+//         current = current.next;
+//       }
+//       return count;
+//     }
+  
+//     insert(value) {
+//       let count = this.countValue(value);
+//       if (count >= 2) {
+//         console.log(`❌ Cannot insert '${value}' more than twice.`);
+//         return;
+//       }
+  
+//       const newNode = new Node(value);
+//       if (!this.head) {
+//         this.head = newNode;
+//       } else {
+//         let current = this.head;
+//         while (current.next) {
+//           current = current.next;
+//         }
+//         current.next = newNode;
+//       }
+//       console.log(`✅ Inserted: ${value}`);
+//     }
+  
+//     display() {
+//       let result = "";
+//       let current = this.head;
+//       while (current) {
+//         result += current.value + " -> ";
+//         current = current.next;
+//       }
+//       console.log(result + "null");
+//     }
+//   }
+  
+
+//   const list = new CustomLinkedList();
+//   list.insert(10);
+//   list.insert(20);
+//   list.insert(10);
+//   list.insert(20); 
+//   list.insert(10); 
+//   list.display();
+
+
+// function longestRepeatingChar(str) {
+//     if (str.length === 0) return "";
+  
+//     let maxChar = str[0];       // longest repeating character
+//     let maxCount = 1;           // its count
+  
+//     let currentChar = str[0];   // currently checking character
+//     let currentCount = 1;       // current streak
+  
+//     for (let i = 1; i < str.length; i++) {
+//       if (str[i] === currentChar) {
+//         currentCount++; // increase streak
+//         if (currentCount > maxCount) {
+//           maxCount = currentCount;
+//           maxChar = currentChar;
+//         }
+//       } else {
+//         currentChar = str[i];   // change char
+//         currentCount = 1;       // reset streak
+//       }
+//     }
+  
+//     return `${maxChar} repeated ${maxCount} times`;
+//   }
+  
+//   // 🔹 Example
+//   let input = "aaabbccccdddee";
+//   console.log(longestRepeatingChar(input));  // Output: c repeate
+
+
+
+// function removeDuplicates(arr){
+//     let seen={}
+//     let result=[]
+//     for(let i=0;i<arr.length;i++){
+//         if(!seen.[arr[i]]){
+//             seen[arr[i]]=true
+//             result.push(arr[i])
+
+//         }
+//     }
+//     return result
+
+// }
+// let arr=[1,2,3,4,5,6,7]
+// console.log(removeDuplicates(array))
+
+
+
+
+
+  
