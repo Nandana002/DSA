@@ -418,6 +418,45 @@
 // let arr=[1,2,3,4,5,6,7]
 // console.log(removeDuplicates(array))
 
+// function reverseEachWord(str){
+//     let word=""
+//     let result=""
+//     for(let i=0;i<=str.length;i++){
+//         if(str[i]===" "||i===str.length){
+//             let rev=""
+//             for(let j=word.length-1;j>=0;j--){
+//                 rev+=word[i]
+//             }
+//             result+=rev
+
+//             if(i!==str.length){
+//                 result+="";
+//             }
+//             word=""
+//         }else{
+//             word+=str[i]
+//         }
+
+
+//     }
+//     return result;
+// }
+
+// let input="good morning"
+// let output=reverseEachWord(input)
+// console.log(output)
+
+
+// function hide(str,index=0,result=""){
+//     if(index===str.length){
+//       return result
+//     }
+//     if(str[index]!=='l'){
+//       result+=str[index]
+//     }
+//     return hide(str,index+1,result)
+//   }
+//   console.log(hide('hello'))
 
 
 

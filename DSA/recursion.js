@@ -160,6 +160,41 @@
 // console.log(findSmallestWord(sentence));
 
 
+// //palidromeUsing recursion
+
+// function isPalindrome(str,start=0,end=str.length01){
+//     if(start>=end){
+//         return true
+//     }
+//     if(str[start]!==str[end]){
+//         return false;
+//     }
+//     return isPalindrome(str,str+1,end-1)
+// }
+
+
+
+
+// function binarySearch(arr, target, left = 0, right = arr.length - 1) {
+//     if (left > right) return -1; // Base case: not found
+
+//     const mid = Math.floor((left + right) / 2);
+
+//     if (arr[mid] === target) return mid;
+//     if (arr[mid] > target)
+//         return binarySearch(arr, target, left, mid - 1);
+//     else
+//         return binarySearch(arr, target, mid + 1, right);
+// }
+
+// // Example usage
+// const arr = [10, 20, 30, 40, 50, 60];
+// const target = 40;
+// const result = binarySearch(arr, target);
+
+// console.log(result); // Output: 3 (index of 40)
+
+
 
 
 
