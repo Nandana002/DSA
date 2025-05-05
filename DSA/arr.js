@@ -459,6 +459,136 @@
 //   console.log(hide('hello'))
 
 
+// string il smallest word kanan, 
+// function findSmallestWord(str) {
+//     let words = str.split(" ");
+//     let smallest = words[0];
+
+//     for (let i = 1; i < words.length; i++) {
+//         if (words[i].length < smallest.length) {
+//             smallest = words[i];
+//         }
+//     }
+
+//     return smallest;
+// }
+
+// // Example:
+// let input = "this is a simple test string";
+// let result = findSmallestWord(input);
+// console.log("Smallest word:", result);
+
+// //function findAverage(arr) {
+//     let sum = 0;
+
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i]; // adding all elements
+//     }
+
+//     let average = sum / arr.length;
+//     return average;
+// }
+
+// // Example:
+// let numbers = [10, 20, 30, 40, 50];
+// let result = findAverage(numbers);
+// console.log("Average is:", result);
+
+
+// let arr=[1,2,3,4,5,6,7]
+// let target=5
+// let seen=new Set()
+// for(let i=0;i<arr.length;i++){
+//     let complement=target-arr[i]
+//     if(seen.has(complement)){
+//         console.log(`[${arr[i]},${complement}]`)
+
+//     }
+//     seen.add(arr[i])
+
+// }
+
+//sum of Array 
+
+// function sum(arr){
+//     let sum=0;
+//     for(let i=0;i<arr.length;i++){
+//         sum+=arr[i]
+//     }
+//     return sum;
+// }
+// let array=[1,2,3,4,5,6]
+// let result=sum(array)
+// console.log(result)
+
+
+// //findDlargestNumber In an array
+// function largest(arr){
+//     if(arr.length===0)return 0;
+//     let largest=arr[0]
+    
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]>largest){
+//             largest=arr[i]
+//         }
+        
+//     }
+//     return largest
+// }
+// let input=[1,2,3,5,3,3]
+// console.log(largest(input))
+
+
+
+// 
+// Check if Two Strings are Anagrams
+
+// function areAnagrams(str1,str2){
+//     if(str1.length!==str2.length){
+//         return false
+//     }
+//     let charCount={}
+//     for(let char of str1){
+//         charCount[char]=(charCount[char]||0)+1
+//     }
+//     for(let char of str2){
+//         if(!charCount[char]){
+//             return false
+        
+//         }
+//         charCount[char]--
+//     }
+//     return -1
+// }
+// console.log(areAnagrams("listen",'silent'))
+
+
+
+
+// function findCommonElements(arr1, arr2) {
+//     let set = new Set(arr1);
+//     let result = [];
+
+//     for (let num of arr2) {
+//         if (set.has(num)) {
+//             result.push(num);
+//             set.delete(num); 
+//         }
+//     }
+
+//     return result;
+// }
+
+
+// let array1 = [1, 2, 3, 4, 5];
+// let array2 = [3, 4, 5, 6, 7];
+
+// console.log(findCommonElements(array1, array2)); 
+
+
+
+
+
 
 
   

@@ -912,7 +912,264 @@
 //     return result
 // }
 
+// linked list il insert in a spcfic index in ille function
+
+//  class Node {
+//      constructor(value) {
+//          this.value = value;
+//          this.next = null;
+//      }
+//  }
+ 
+//  // LinkedList class
+//  class LinkedList {
+//      constructor() {
+//          this.head = null;
+//      }
+ 
+//      // Function to insert at specific index
+//      insertAt(index, value) {
+//          let newNode = new Node(value);
+ 
+//          if (index === 0) {
+//              // insert at head
+//              newNode.next = this.head;
+//              this.head = newNode;
+//              return;
+//          }
+ 
+//          let current = this.head;
+//          let count = 0;
+ 
+//          // Traverse to the node just before the index
+//          while (current !== null && count < index - 1) {
+//              current = current.next;
+//              count++;
+//          }
+ 
+//          // If index is out of bounds
+//          if (current === null) {
+//              console.log("Index out of range");
+//              return;
+//          }
+ 
+//          newNode.next = current.next;
+//          current.next = newNode;
+//      }
+ 
+//      // Function to display list
+//      printList() {
+//          let current = this.head;
+//          let output = '';
+//          while (current !== null) {
+//              output += current.value + " → ";
+//              current = current.next;
+//          }
+//          console.log(output + "null");
+//      }
+//  }
+ 
+//  // Example
+//  let list = new LinkedList();
+//  list.insertAt(0, 10); // [10]
+//  list.insertAt(1, 20); // [10 → 20]
+//  list.insertAt(1, 15); // [10 → 15 → 20]
+//  list.insertAt(3, 25); // [10 → 15 → 20 → 25]
+//  list.printList();
+
+
+//circlular linkeLIst
+
+// class Node{
+//     constructor(data){
+//         this.data=data
+//         this.next=nulll
+//     }
+// }
+// class circlularLinkedList{
+//     constructor(){
+//         this.head=null
+//     }
+
+//     append(data){
+//         const newNode=new Node(data)
+//         if(!this.head){
+//             this.head=newNode
+//             newNode.next=this.head
+
+//         }elseP
+//         let temp=this.ehad
+//         while(temp.next!==this.head){
+//             temp=temp.next
+//         }
+//         temp.next=newNode;
+//         newnode.next=this.head
+
+//     }
+// }
+
+
+// // hasCycle(){
+// //     let slow=this.head
+// //     let fast=this.head
+// //     while(fast&fast.next){
+// //         slow=slow.next
+// //         fast=fast.next.next
+
+// //         if(slow===fast)return true
+// //     }
+// //     return false
+// // }
 
 
 
+// function findMin(arr){
+//     left=0,right=arr.length-1
+//     while(left<right){
+//         let mid=Math.floor((left+right)/2)
+//         if(arr[mid]>arr[right]){
+//             arr[left]=mid+1
+//         }else{
+//             arr[right]=mid
+//         }
+//     }
+//     return arr[left]
+// }
+
+
+// // Node definition
+// class ListNode {
+//     constructor(value) {
+//       this.value = value;
+//       this.next = null;
+//     }
+//   }
+  
+//   // Singly linked list
+//   class LinkedList {
+//     constructor() {
+//       this.head = null;
+//     }
+  
+//     // Insert a new value at the end
+//     insert(value) {
+//       const newNode = new ListNode(value);
+//       if (!this.head) {
+//         this.head = newNode;
+//         return;
+//       }
+//       let cur = this.head;
+//       while (cur.next) {
+//         cur = cur.next;
+//       }
+//       cur.next = newNode;
+//     }
+  
+//     // Check if the list is a palindrome
+//     isPalindrome() {
+//       const arr = [];
+//       let curr = this.head;
+//       // Step 1: build array of values
+//       while (curr) {
+//         arr.push(curr.value);
+//         curr = curr.next;
+//       }
+//       // Step 2: two-pointer check
+//       let i = 0, j = arr.length - 1;
+//       while (i < j) {
+//         if (arr[i] !== arr[j]) {
+//           return false;
+//         }
+//         i++;
+//         j--;
+//       }
+//       return true;
+//     }
+  
+//     // Utility: print the list
+//     print() {
+//       const vals = [];
+//       let cur = this.head;
+//       while (cur) {
+//         vals.push(cur.value);
+//         cur = cur.next;
+//       }
+//       console.log(vals.join(' -> '));
+//     }
+//   }
+  
+//   // Example usage:
+//   const list = new LinkedList();
+//   [1, 2, 3, 2, 1].forEach(v => list.insert(v));
+  
+//   list.print();  // Output: 1 -> 2 -> 3 -> 2 -> 1
+//   console.log(
+//     list.isPalindrome()
+//       ? 'The linked list is a palindrome.'
+//       : 'The linked list is not a palindrome.'
+//   );
+
+
+
+// -implement linked list with condition that only 1 duplicate is allowed
+
+// class Node {
+//   constructor(value) {
+//       this.value = value;
+//       this.next = null;
+//   }
+// }
+
+// class LinkedList {
+//   constructor() {
+//       this.head = null;
+//       this.countMap = {}; // Initialize count map
+//   }
+
+//   add(value) {
+//       if (this.countMap[value] === 2) {
+//           console.log(`${value} already exists twice`);
+//           return;
+//       }
+
+//       const newNode = new Node(value);
+//       if (!this.head) {
+//           this.head = newNode;
+//       } else {
+//           let curr = this.head;
+//           while (curr.next) {
+//               curr = curr.next;
+//           }
+//           curr.next = newNode;
+//       }
+
+//       // Fix typo: countMap, not countMao
+//       this.countMap[value] = (this.countMap[value] || 0) + 1;
+//   }
+
+//   print() {
+//       let curr = this.head;
+//       let result = "";
+//       while (curr) {
+//           result += curr.value + "->";
+//           curr = curr.next;
+//       }
+//       console.log(result + "null");
+//   }
+// }
+
+// // Fixed class name and instantiation
+// let list = new LinkedList();
+// list.add(1);
+// list.add(5);
+// list.add(5);
+// list.add(4);
+// list.add(4);
+// list.add(4); // This one will be ignored
+
+// list.print(); // Expected Output: 1->5->5->4->4->null
+
+
+
+  
 

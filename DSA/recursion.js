@@ -195,8 +195,52 @@
 // console.log(result); // Output: 3 (index of 40)
 
 
+// function findSumRecursive(arr, index) {
+//     if (index === arr.length) {
+//         return 0;
+//     }
+//     return arr[index] + findSumRecursive(arr, index + 1);
+// }
 
+// function findAverage(arr) {
+//     let sum = findSumRecursive(arr, 0);
+//     return sum / arr.length;
+// }
 
+// // Example:
+// let numbers = [10, 20, 30, 40, 50];
+// let average = findAverage(numbers);
+// console.log("Average is:", average);
+
+//find largest in an array
+//    function findLargest(arr,index=0,max=-Infinity){
+    // if(index===arr.length){
+    //     return max
+          
+    //     }
+    //     if(arr[index]>max){
+    //         max=arr[index]
+    //     }
+    //     return findLargest(arr,index+1,max)
+    // }
+    // let arr=[1,3,5,3,2]
+    // console.log(findLargest(arr))
+//************findSecondlLargest *************** */
+
+//     function findSecondLargest(arr,index=0,largest=-Infinity,secondLargest=-Infinity){
+//         if(index===arr.length){
+//             return secondLargest
+//         }
+//         if(arr[index]>largest){
+//             secondLargest=largest
+//             largest=arr[index];
+//         }else if(arr[index]>secondLargest&&arr[index]!==largest){
+//             secondLargest=largest
+//         }
+//         return findSecondLargest(arr,index+1,largest,secondLargest)
+//     }
+// let arr=[1,2,3,4,5,6]
+// console.log(findSecondLargest(arr))
 
 
 
